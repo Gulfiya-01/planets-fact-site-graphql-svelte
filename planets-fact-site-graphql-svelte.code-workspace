@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../companies-graphql-svelte-kit"
+		},
+		{
+			"path": "../officeHours/Age-calculator-react"
+		},
+		{
+			"path": "../companies-graphql-nextjs"
+		}
+	]
+}
