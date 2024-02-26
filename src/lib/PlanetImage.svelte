@@ -5,7 +5,7 @@
     $:planet=data.planets_by_pk;
     const determineImageSrc = (selectedView: string, planetName: string | undefined) => {
     const name = planetName?.toLowerCase(); 
-    if (selectedView === "overview" || selectedView === "geology") {
+    if (selectedView === "overview" || selectedView === "geology"||selectedView === "moons" ) {
       return `../../public/assets/planet-${name}.svg`;
     }
     if (selectedView === "structure") {

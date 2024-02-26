@@ -3,6 +3,8 @@
 	import Footer from "$lib/Footer.svelte";
 	import PlanetImage from "$lib/PlanetImage.svelte";
   import type { PageData } from "./$types";
+
+
   export let data: PageData;
   
   let selectedView = 'overview';
@@ -28,12 +30,15 @@
       {:else if selectedView === 'structure'}
         <p>{data.planets_by_pk?.structure_content}</p>
         <p class="source">Source: <a href={data.planets_by_pk?.structure_source}>Wikipedia</a></p>
+      {:else if selectedView === 'moons'}
+        <p>{data.moons_by_pk?.name}</p>
+        <p class="source">Source: <a href={data.planets_by_pk?.overview_source}>Wikipedia</a></p>
       {/if}
     </article>
   </section>
 
   <section class="right-column">
-    <div class="btn-main">
+    <div class="btn-main" >
       <button class="content-btn" on:click={() => handleButtonClick('overview')}>
         <span class="btn-number">01</span>OVERVIEW
       </button>
@@ -45,7 +50,9 @@
       <button class="content-btn" on:click={() => handleButtonClick('geology')}>
         <span class="btn-number">03</span>SURFACE GEOLOGY
       </button>
-
+      <button class="content-btn" on:click={() => handleButtonClick('moons')}>
+        <span class="btn-number">04</span>PLANET SATELLITES
+      </button>
     </div>
   </section>
 

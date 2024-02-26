@@ -18,9 +18,14 @@ export const getPlanet = async (id:number) => {
     rotation: true,
     structure_content: true,
     structure_source:true,
-    temperature: true,
+    temperature:true,
     
-
+  },
+  moons_by_pk:{
+    __args:{
+      id
+    },
+    name:true,
   }
 })
   return post;

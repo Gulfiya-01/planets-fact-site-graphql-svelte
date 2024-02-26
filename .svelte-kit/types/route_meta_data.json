@@ -1,0 +1,11 @@
+{
+	"/": [
+		"src/routes/+page.ts",
+		"src/routes/+layout.ts",
+		"src/routes/+layout.ts"
+	],
+	"/[planetId]": [
+		"src/routes/[planetId]/+page.ts",
+		"src/routes/+layout.ts"
+	]
+}
